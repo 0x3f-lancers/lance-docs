@@ -1,0 +1,44 @@
+---
+title: "Take profit and stop loss"
+description: "Set exit levels on any position, as a one-tap level or an exact price."
+icon: "bullseye"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+A **take profit** (🎯) closes your position when the price reaches a level in your favour. A **stop loss** (🛡) closes it when the price reaches a level against you. Both are orders on Hyperliquid, so they work even when you aren't in Telegram.
+
+## Percentages are return on margin
+
+Levels in percent are your return on the margin you put up, not the price move. At 2x leverage, +10% means the price moved 5% your way. At 10x, a −5% stop loss is a 0.5% price move against you.
+
+## Set them from a card
+
+On a position's card, tap 🎯 or 🛡. Pick one of the levels, or tap **✏️ Type a price or %** for your own. Before anything is placed, you see the trigger price and what you would make or lose there. Tap **✅ Set take profit at …** (or stop loss) to place it. To remove one, tap **🗑 Turn take profit off** or **🗑 Turn stop loss off**.
+
+You can also add them when you open a trade with **✏️ Custom**: the bot places them from the fill price as soon as the order fills.
+
+## Or type them
+
+| Type | What it does |
+| --- | --- |
+| `tp btc 10%` | Take profit at +10% of margin |
+| `tp eth 4200` | Take profit at a price of $4,200 |
+| `sl btc 5%` | Stop loss at −5% of margin |
+| `sl btc 78000` | Stop loss at a price of $78,000 |
+| `sl btc +2%` | A stop loss at +2%, for a stop that locks in a gain |
+| `sl btc off` | Remove the stop loss |
+
+A level you type is shown with what it would do before it's placed.
+
+## When they fill
+
+The bot messages you when a take profit or stop loss fills, with the size, price, realized PnL, Hyperliquid's fee and the bot fee. It also tells you if one triggers but Hyperliquid can't fill it, for example when the price moves past its 10% slippage limit, so your position is still open. See [Alerts](/telegram/alerts).
+
+<Warning>
+  A stop loss limits a loss in normal markets but can't promise a price. In a fast move it can fill worse than its trigger, or not fill at all.
+</Warning>
+
+In Lance Trade, add a take profit and stop loss in the order panel with a market order, or set them from **Positions** after a limit order fills.
+
+<RiskWarning />

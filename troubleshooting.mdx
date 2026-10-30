@@ -1,0 +1,68 @@
+---
+title: "Troubleshooting"
+description: "Fixes for the problems members run into most."
+icon: "wrench"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+## Connecting
+
+<AccordionGroup>
+  <Accordion title="The approval page says the link has expired">
+    Approval links work for 30 minutes, and stop once you've approved or the bot gives you a newer one. Tap **Get a fresh link** on the page, or send `/start connect` to your bot.
+  </Accordion>
+  <Accordion title="Telegram didn't open after I approved">
+    The page shows a one-time code such as `ABCD-EFGH`. Send it to your bot from your own Telegram account. It works for 60 minutes.
+  </Accordion>
+  <Accordion title="The page asks me to deposit first">
+    Hyperliquid has never seen this wallet. Deposit USDC on Hyperliquid with it first, then open the link again. On testnet, the faucet only pays wallets that have deposited on Hyperliquid mainnet.
+  </Accordion>
+  <Accordion title="The page asks for my main wallet">
+    You connected an API wallet, a vault or a sub-account. Switch your wallet to the main account you use on Hyperliquid.
+  </Accordion>
+  <Accordion title="The page asks me to use a regular wallet">
+    Smart-contract wallets can't connect, because the bot can't check their signatures. Use a regular wallet such as MetaMask.
+  </Accordion>
+  <Accordion title="There's no wallet on my phone">
+    Tap **🦊 Open in MetaMask app** in the bot instead of **🔗 Open approval page**. The page then opens inside MetaMask, where your wallet is available.
+  </Accordion>
+</AccordionGroup>
+
+## Trading
+
+<AccordionGroup>
+  <Accordion title="The Long or Short button is switched off">
+    Hyperliquid's order book can't fill that side right now: nobody is selling (for a long) or buying (for a short), or the gap is wider than your community's price limit. The card says which. Try a smaller size, or try again later.
+  </Accordion>
+  <Accordion title="My order is outside my community's limits">
+    Your community sets the markets, the highest leverage and the largest order. Pick a smaller size or lower leverage.
+  </Accordion>
+  <Accordion title="A trade was refused because my key expired">
+    Your trading key lasts up to 180 days. Follow the renewal steps the bot shows, or see [Renew your trading key](/account/wallet-and-access#renew-your-trading-key).
+  </Accordion>
+  <Accordion title="Lance Trade says to use a different leverage">
+    Hyperliquid keeps one leverage per market. With a position or resting orders in that market, new orders must use the same leverage. Tap **Use Nx** where it's offered.
+  </Accordion>
+  <Accordion title="My bot says it's paused">
+    Your community owner has paused trading. You can still cancel open orders, take profits and stop losses in Lance Trade, and sign browsers out. Resting orders stay on Hyperliquid and can still fill. You can always manage your positions directly on Hyperliquid with your wallet.
+  </Accordion>
+</AccordionGroup>
+
+## Lance Trade
+
+<AccordionGroup>
+  <Accordion title="The sign-in link doesn't work">
+    Sign-in links work once, for 10 minutes. Tap **🌐 New link** in the bot, or **Get a new link** in Lance Trade.
+  </Accordion>
+  <Accordion title="I was signed out">
+    Sessions end after 30 days, when you sign out, when you remove access or connect a different wallet, or when a browser is signed out from **🖥 Devices**. Sign in again from your bot.
+  </Accordion>
+  <Accordion title="I see a sign-in I don't recognise">
+    Tap **Sign out this browser** on the bot's message, or **Sign out everywhere** in **🖥 Devices**. If you think someone has your Telegram account, also tap **Remove access**.
+  </Accordion>
+</AccordionGroup>
+
+Still stuck? Message the [Lance team on Telegram](https://telegram.me/bhargav2495).
+
+<RiskWarning />

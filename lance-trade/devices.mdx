@@ -1,0 +1,39 @@
+---
+title: "Devices and sessions"
+description: "See every browser signed in to Lance Trade, and sign any of them out from Telegram."
+icon: "laptop-mobile"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+Each browser you sign in to Lance Trade gets its own session, which lasts 30 days.
+
+## Every new sign-in is announced
+
+When a browser signs in, your bot sends a message naming the device and roughly where it signed in from, with a **Sign out this browser** button. If you don't recognise it, tap that button straight away.
+
+## See your devices
+
+In your bot, open **🔐 Wallet and access** and tap **🖥 Devices**. For each browser you see:
+
+- when and where it signed in;
+- when and where it was last used;
+- when its session ends;
+- a button to sign it out.
+
+**Sign out everywhere** ends every session at once. Devices and signing out work even while your community's bot is paused.
+
+## When sessions end
+
+A session ends when:
+
+- 30 days have passed;
+- you sign out in Lance Trade, or sign that browser out from **🖥 Devices**;
+- you tap **Sign out everywhere**;
+- you remove access or connect a different wallet in the bot.
+
+## About locations
+
+Places are a city and country, worked out from the browser's IP address with an offline database ([DB-IP](https://db-ip.com), CC BY 4.0). Addresses are never sent anywhere to be looked up. Only a partly hidden form of the address is kept, such as `49.36.x.x`.
+
+<RiskWarning />

@@ -1,0 +1,168 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Lance Docs",
+  "description": "How to trade with a Lance bot in Telegram and in Lance Trade, and how community owners launch their own branded bot.",
+  "colors": {
+    "primary": "#0B5E43",
+    "light": "#7CCFA8",
+    "dark": "#003D2D"
+  },
+  "background": {
+    "color": {
+      "light": "#F7FAF8",
+      "dark": "#06140F"
+    }
+  },
+  "fonts": {
+    "family": "Inter",
+    "heading": {
+      "family": "Sora"
+    }
+  },
+  "favicon": "/favicon.png",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://lancetrade.xyz"
+  },
+  "banner": {
+    "content": "Lance runs on Hyperliquid **testnet** for now, so trades use test funds. [What this means](/faq#is-lance-live-on-mainnet)",
+    "dismissible": true
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "lancetrade.xyz",
+        "href": "https://lancetrade.xyz"
+      },
+      {
+        "label": "Book a demo",
+        "href": "https://lancers.technology/contact"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open Lance Trade",
+      "href": "https://app.lancetrade.xyz"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": ["index", "how-it-works", "quickstart"]
+          },
+          {
+            "group": "Trade in Telegram",
+            "pages": [
+              "telegram/connect-wallet",
+              "telegram/place-a-trade",
+              "telegram/take-profit-stop-loss",
+              "telegram/type-your-trades",
+              "telegram/alerts",
+              "telegram/settings"
+            ]
+          },
+          {
+            "group": "Lance Trade",
+            "pages": ["lance-trade/sign-in", "lance-trade/trade-on-the-web", "lance-trade/devices"]
+          },
+          {
+            "group": "Your account",
+            "pages": ["account/wallet-and-access", "account/fees"]
+          },
+          {
+            "group": "Help",
+            "pages": ["faq", "troubleshooting"]
+          }
+        ]
+      },
+      {
+        "tab": "Community owners",
+        "groups": [
+          {
+            "group": "Your branded bot",
+            "pages": [
+              "owners/overview",
+              "owners/launch",
+              "owners/fees-and-your-share",
+              "owners/stats",
+              "owners/bot-settings"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Safety and legal",
+        "groups": [
+          {
+            "group": "Safety",
+            "pages": ["safety/how-access-works", "safety/official-links"]
+          },
+          {
+            "group": "Legal",
+            "pages": ["legal/risk-disclosure", "legal/restricted-regions", "legal/terms-and-privacy"]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/0xLancersT",
+      "telegram": "https://telegram.me/bhargav2495",
+      "linkedin": "https://www.linkedin.com/company/lancerst",
+      "github": "https://github.com/0x3f-lancers"
+    },
+    "links": [
+      {
+        "header": "Lance",
+        "items": [
+          { "label": "Website", "href": "https://lancetrade.xyz" },
+          { "label": "Lance Trade", "href": "https://app.lancetrade.xyz" },
+          { "label": "Example bot", "href": "https://telegram.me/Northstar123bot" },
+          { "label": "Book a demo", "href": "https://lancers.technology/contact" }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          { "label": "Risk disclosure", "href": "/legal/risk-disclosure" },
+          { "label": "Terms of Service", "href": "https://lancers.technology/legal?tab=tos" },
+          { "label": "Privacy Policy", "href": "https://lancers.technology/legal?tab=privacy" },
+          { "label": "Restricted regions", "href": "/legal/restricted-regions" }
+        ]
+      },
+      {
+        "header": "Lancers Technology",
+        "items": [
+          { "label": "About", "href": "https://lancers.technology/" },
+          { "label": "Services", "href": "https://lancers.technology/services" },
+          { "label": "Contact", "href": "https://lancers.technology/contact" }
+        ]
+      }
+    ]
+  },
+  "search": {
+    "prompt": "Search the Lance docs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "claude", "chatgpt"]
+  },
+  "seo": {
+    "metatags": {
+      "og:site_name": "Lance Docs"
+    }
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "Page not found",
+      "description": "This page doesn't exist. Go to the [docs home](/) or [search](/) for what you need."
+    }
+  }
+}

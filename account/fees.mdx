@@ -1,0 +1,33 @@
+---
+title: "Fees"
+description: "What you pay on each trade: Hyperliquid's trading fee plus Lance's bot fee."
+icon: "receipt"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+Each trade has two fees.
+
+| Fee | Rate | Who charges it |
+| --- | --- | --- |
+| **Hyperliquid's trading fee** | At Hyperliquid's base tier: 0.045% when your order fills at once (taker), 0.015% when it rests on the book first (maker) | Hyperliquid. See [Hyperliquid's fee schedule](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees). |
+| **Lance's bot fee** | **0.05%** of the position size (illustrative; final fees are confirmed before launch) | Lance, as a builder fee on Hyperliquid |
+
+## The bot fee is shown before every trade
+
+The review before each trade shows the bot fee in dollars, and the fill message shows both fees as charged. With one-tap trading on there's no review, so the fee shows in the fill message.
+
+**Example:** a $100 position at 0.05% has a bot fee of $0.05. Closing it is another trade, with its own fees.
+
+## How it's collected
+
+When you connected, you approved Lance's builder fee on Hyperliquid, up to a set rate. Hyperliquid collects it with each fill of an order placed through your bot, including take profits and stop losses the bot placed. It doesn't apply to trades you place anywhere else.
+
+Lance shares part of the bot fee with the community that runs your bot.
+
+## What Lance doesn't charge
+
+- **Funding** is paid between traders on Hyperliquid. Lance takes no part of it.
+- **Deposits and withdrawals** happen on Hyperliquid, directly from your wallet. Lance doesn't touch them.
+
+<RiskWarning />

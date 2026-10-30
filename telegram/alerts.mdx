@@ -1,0 +1,30 @@
+---
+title: "Alerts"
+description: "Messages from your bot when an exit fills or a position nears liquidation."
+icon: "bell"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+Your bot watches your Hyperliquid account and messages you when:
+
+| Alert | When |
+| --- | --- |
+| 🎯 **Take profit or stop loss filled** | One the bot placed fills. You get the size, price, realized PnL, Hyperliquid's fee and the bot fee. |
+| **Exit couldn't fill** | A take profit or stop loss triggers but Hyperliquid can't fill it, for example when the price moves past its 10% slippage limit. Your position is still open. |
+| **Close to liquidation** | A first warning as the price nears your liquidation price, and an urgent one when it gets very close. You hear again only after the position has moved away and back. |
+| **Liquidated** | A position was liquidated. |
+
+## Turn alerts on or off
+
+Open [Settings](/telegram/settings) and tap **🔕 Turn alerts off** or **🔔 Turn alerts on**. Exits the bot placed still work while alerts are off; you just don't get the messages.
+
+## Alerts can arrive late
+
+The bot checks accounts every 10 seconds when a position is near liquidation, every 30 seconds when you have positions or exits, and every 5 minutes otherwise. Telegram can also be slow. Treat alerts as a convenience, not a safety net: set a stop loss on every position you can't watch.
+
+<Note>
+  If your community owner pauses the bot, it sends no alerts until it's running again. Your take profits and stop losses stay on Hyperliquid and still work.
+</Note>
+
+<RiskWarning />

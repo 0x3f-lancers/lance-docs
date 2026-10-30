@@ -1,0 +1,30 @@
+---
+title: "Settings"
+description: "Your default order size, leverage and chart, one-tap trading, alerts and time zone."
+icon: "sliders"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+Send `/settings`, or tap **⚙️ Settings**. Lance Trade uses the same defaults, so a change in one shows in the other.
+
+| Setting | What it changes |
+| --- | --- |
+| **Order size** | The amount picked first on a market's card. |
+| **Leverage** | The leverage picked first, within your community's cap. |
+| **Chart** | The chart timeframe a card opens with: 15m, 1h, 4h or 1d. |
+| **Trades** | **Confirm each one** shows a review before every trade. **⚡ One tap** trades as soon as you tap Long or Short. |
+| **Alerts** | Messages about fills and liquidation risk. See [Alerts](/telegram/alerts). |
+| **🕐 Time zone** | The time zone the bot writes times in. Until you set one, it uses UTC and says so. |
+
+From Settings you can also open **🔐 Wallet and access**: your connected wallet, your trading key, Lance Trade sign-in and your devices. See [Wallet and access](/account/wallet-and-access).
+
+<Frame caption="Example screen. Your community's bot shows its own name and may look slightly different.">
+  <img src="/images/screens/bot-settings.webp" alt="Example bot settings for order size, leverage, chart timeframe, alerts and trade confirmation" style={{ maxWidth: "320px", margin: "0 auto" }} />
+</Frame>
+
+<Warning>
+  With one-tap trading on, a single tap places a real order with no review. Leave it off until you know the bot well.
+</Warning>
+
+<RiskWarning />

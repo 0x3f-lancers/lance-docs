@@ -1,0 +1,56 @@
+---
+title: "What Lance can and can't do"
+sidebarTitle: "How access works"
+description: "The exact permissions you give your community's bot, how your key is kept, and how to take access back."
+icon: "shield-halved"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+When you connect, you don't hand over your wallet. You approve a separate trading key on Hyperliquid (Hyperliquid calls it an API wallet) that only your community's bot holds.
+
+<CardGroup cols={2}>
+  <Card title="Lance can" icon="check">
+    - Place and close the trades you ask for
+    - Set take profits and stop losses
+    - Change leverage on a market
+    - Charge its bot fee, up to the rate you approved
+  </Card>
+  <Card title="Lance can't" icon="xmark">
+    - Withdraw your funds
+    - Send funds to another wallet
+    - See or use your wallet's own keys or seed phrase
+    - Keep trading after you remove access, or after the key expires
+  </Card>
+</CardGroup>
+
+## The trading key, in full
+
+Hyperliquid lets an API wallet sign any trading action on your account. Besides trades, that includes moving funds between your own Hyperliquid balances and sub-accounts, or into vaults. It never includes withdrawing or sending funds to another wallet. Your bot only uses its key for the trades and settings you ask for.
+
+## How keys are kept
+
+- **One key per member.** Each member gets their own key, made for them when they connect. A key is never reused: reconnecting, renewing or removing access deletes the old one.
+- **Encrypted.** Keys are stored encrypted, and never reach your browser or Lance Trade.
+- **Short-lived.** Each key expires after at most 180 days. You renew it with one signature.
+
+## Links tied to you
+
+- An approval link names the Telegram user it's for, and the page shows it before any signature.
+- The bot only connects the wallet that signed, and only for a one-time code sent from that same Telegram account. A forwarded link can't connect someone else's wallet to your account.
+- Lance Trade sign-in links work once, for 10 minutes, and every new browser is announced in your chat.
+
+## Trades stay private
+
+You trade in a private chat with the bot, or in your own Lance Trade session, never in a group. Nobody can trade for you by posting a command in your community's group.
+
+## Take access back at any time
+
+- In the bot: **🔐 Wallet and access**, then **Remove access**. See [Remove access](/account/wallet-and-access#remove-access).
+- On Hyperliquid: revoke the bot's key yourself, without going through the bot.
+
+<Warning>
+  No software is free of risk. Use a wallet you're comfortable trading from, keep your seed phrase offline, and only use the [official links](/safety/official-links).
+</Warning>
+
+<RiskWarning />

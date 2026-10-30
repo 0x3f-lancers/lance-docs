@@ -1,0 +1,56 @@
+---
+title: "Type your trades"
+description: "Write what you want instead of tapping through screens."
+icon: "keyboard"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+Send a short line to your bot and it does the rest. Capital letters don't matter, and a leading slash is optional, so `/long BTC 20 3` works too.
+
+## Markets and charts
+
+| Type | What it does |
+| --- | --- |
+| `btc` | Opens BTC's card |
+| `btc 4h` | Opens BTC's card with the 4-hour chart (15m, 1h, 4h, 1d) |
+
+## Open and close
+
+| Type | What it does |
+| --- | --- |
+| `long eth 50 3x` | A $50 long on ETH at 3x |
+| `short sol 20` | A $20 short on SOL at your default leverage |
+| `long btc 20 3` | The `x` after the leverage is optional |
+| `close btc` | Closes all of your BTC position |
+| `close btc 50%` | Closes half of it |
+
+`buy` and `l` work like `long`, `sell` and `s` like `short`, and `exit` like `close`. Amounts are position sizes, and the margin is the size divided by the leverage.
+
+Unless you've switched on one-tap trading, a typed trade shows the same review as a tapped one before anything is placed.
+
+## Take profit and stop loss
+
+| Type | What it does |
+| --- | --- |
+| `tp btc 10%` | Take profit at +10% of margin |
+| `sl btc 78000` | Stop loss at a price of $78,000 |
+| `sl btc 5%` | Stop loss at −5% of margin |
+| `sl btc off` | Removes the stop loss |
+
+See [Take profit and stop loss](/telegram/take-profit-stop-loss) for how percentages work.
+
+## Screens
+
+| Type | Opens |
+| --- | --- |
+| `home` | Home: your account, positions and markets |
+| `positions` | Your open positions |
+| `markets` | All markets and prices |
+| `account` | Your balance in each account, and your tokens |
+| `settings` | Your defaults |
+| `help` | The guide inside the bot |
+
+If the bot can't tell what you mean, it replies with an example to copy.
+
+<RiskWarning />

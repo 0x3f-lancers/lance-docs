@@ -1,0 +1,50 @@
+---
+title: "Wallet and access"
+description: "Check your balances, renew your trading key, and remove the bot's access."
+icon: "key"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+## Your balances
+
+Send `/account`, or tap **💼 Account**, for the balance of each perps account and every spot token you hold on Hyperliquid, in USD.
+
+## Wallet and access
+
+Tap **🔐 Wallet and access** on Home or in Settings. It shows your connected wallet and when your trading key expires, and has:
+
+- **🔑 Renew key**, to replace your trading key;
+- **🌐 Lance Trade**, for a sign-in button;
+- **🖥 Devices**, for your Lance Trade sessions ([Devices and sessions](/lance-trade/devices));
+- **Remove access**, to disconnect.
+
+## Renew your trading key
+
+Hyperliquid stops accepting a trading key after at most 180 days. Your bot warns you 14, 3 and 1 days before, and once it has expired. From 14 days out, Home shows **🔑 Renew key** at the top.
+
+<Steps>
+  <Step title="Tap Renew key">
+    The bot makes a fresh key and sends an approval link for it. Your current key keeps trading until you sign.
+  </Step>
+  <Step title="Sign once">
+    Open the link at `connect.lancetrade.xyz` and sign with the wallet that's already connected. The bot fee is already approved, so it's one signature.
+  </Step>
+  <Step title="Go back to Telegram">
+    Tap **Back to Telegram** on the page, or **✅ I've renewed** in the bot. The bot switches to the new key, which replaces the old one on Hyperliquid too.
+  </Step>
+</Steps>
+
+A key approved from a different wallet is refused, and you get a fresh link. If a trade is refused because your key has expired, the bot shows these renewal steps instead of starting over.
+
+## Remove access
+
+**Remove access** deletes your trading key from the bot, so it can no longer trade for you. It also signs out every Lance Trade browser. Your funds, open positions and any resting orders stay on Hyperliquid, where you can manage them with your wallet. To use the bot again, tap **Connect again**.
+
+You can also revoke the bot's key on Hyperliquid itself, at any time, without going through the bot.
+
+## Connect a different wallet
+
+Remove access, then connect again with the other wallet. Connecting a different wallet signs out every Lance Trade browser.
+
+<RiskWarning />

@@ -1,0 +1,64 @@
+---
+title: "Connect your wallet"
+description: "Approve your community's bot once, from your own wallet, on the approval page."
+icon: "wallet"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+You connect once. After that, every trade is a tap or a typed line in Telegram.
+
+## What you need
+
+- **A browser wallet** such as MetaMask. On a phone, use the MetaMask app (see below). Other mobile wallets aren't supported yet.
+- **Your main Hyperliquid wallet.** Not an API wallet, a vault or a sub-account.
+- **A wallet that has used Hyperliquid.** If Hyperliquid has never seen the wallet, the page asks you to deposit first.
+- **A regular wallet**, not a smart-contract wallet. Smart-contract wallets can't sign in a way the bot can check.
+
+## Steps
+
+<Steps>
+  <Step title="Open the approval page">
+    In your community's bot, tap **🔗 Open approval page**. On a phone, tap **🦊 Open in MetaMask app** instead: it opens the page inside MetaMask's own browser, where your wallet is available.
+
+    The link opens `connect.lancetrade.xyz`. If the address is anything else, stop.
+  </Step>
+  <Step title="Check who the link is for">
+    Before asking for any signature, the page shows who the link is for, for example "This link is for @alice in Northstar Futures". If it isn't your Telegram username, close the page.
+  </Step>
+  <Step title="Connect your wallet and sign">
+    The page asks only for what isn't in place yet. The first time, that's three signatures:
+
+    1. **A message naming you and the bot.** It proves the wallet is yours and moves no funds.
+    2. **The trading key.** Lets the bot place and close trades for you.
+    3. **The bot fee.** Lets Lance charge its fee on trades placed through the bot.
+  </Step>
+  <Step title="Go back to Telegram">
+    When the page says you're all set, tap **Back to Telegram**. The bot checks your approvals on Hyperliquid and connects your wallet.
+
+    If Telegram doesn't open, the page shows a one-time code such as `ABCD-EFGH`. Send it to your bot yourself. The code works for 60 minutes and only from your own Telegram account.
+  </Step>
+</Steps>
+
+<Frame caption="Example screen. Your community's bot shows its own name and may look slightly different.">
+  <img src="/images/screens/bot-welcome.webp" alt="Example bot welcome message explaining how to connect a wallet, with an Open approval page button" style={{ maxWidth: "320px", margin: "0 auto" }} />
+</Frame>
+
+## What you approve
+
+| Approval | What it allows | What it doesn't allow |
+| --- | --- | --- |
+| **Trading key** | Placing and closing trades, setting take profits and stop losses, and changing leverage on your account. | Withdrawing funds or sending them to another wallet. It also stops working after 180 days. |
+| **Bot fee** | Lance charging its bot fee on each trade placed through the bot, up to the approved rate. | Any charge on trades you place elsewhere. |
+
+[How access works](/safety/how-access-works) explains the trading key in full.
+
+## Links expire
+
+An approval link works for 30 minutes, and stops working once you've approved or the bot gives you a newer one. An expired page offers **Get a fresh link**, which takes you back to the bot. You can also send `/start connect` to the bot.
+
+<Warning>
+  Never forward your approval link or the one-time code. The bot only connects the wallet that signed, and only for a code from the Telegram account the link was made for. Even so, keep both to yourself.
+</Warning>
+
+<RiskWarning />

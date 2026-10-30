@@ -1,0 +1,32 @@
+---
+title: "Stats and exports"
+description: "Your community's members, volume, fees and share, inside your own bot."
+icon: "chart-simple"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+As an owner, send `/stats` to your own bot, or tap **🤝 Partner dashboard**. Only owners see it.
+
+## What you see
+
+| Figure | What it is |
+| --- | --- |
+| **Members** | People who have started your bot |
+| **Connected wallets** | Members who have connected a wallet |
+| **Traders** | Members who have traded |
+| **Volume** | Trading volume through your bot |
+| **Bot fees** | Lance bot fees from those trades |
+| **Your share** | Your part of those bot fees |
+
+Below that are your top traders by volume, each with their wallet address, Telegram username and a link to their public record on Hyperliquid.
+
+## Export every fill
+
+Tap **📥 Export CSV** for a spreadsheet of every fill recorded through your bot. Each row has the Telegram user, the wallet, the fees, your share, and the Hyperliquid fill and order IDs, so you can check each one against Hyperliquid's public data.
+
+<Warning>
+  Stats and exports contain your members' Telegram usernames, wallet addresses and trading activity. That's personal data: keep it private, and don't post it or share it outside your team.
+</Warning>
+
+<RiskWarning />

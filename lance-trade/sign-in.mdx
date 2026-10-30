@@ -1,0 +1,47 @@
+---
+title: "Sign in to Lance Trade"
+description: "Open Lance Trade from your bot with a one-time button. No password."
+icon: "right-to-bracket"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+[Lance Trade](https://app.lancetrade.xyz) is your community's bot on a bigger screen: a live chart, the order book, market and limit orders, and your positions and history. It works in any browser on phone, tablet or desktop, in dark or light.
+
+## Look around first
+
+Anyone can open `app.lancetrade.xyz` and watch the markets without signing in: prices, charts, order books and recent trades, live from Hyperliquid. You can try the order panel too, but its order button stays locked until you sign in.
+
+## Sign in
+
+You need a [connected wallet](/telegram/connect-wallet) in your community's bot first.
+
+<Steps>
+  <Step title="Ask your bot for a sign-in button">
+    Tap **🌐 Lance Trade** on Home or in **🔐 Wallet and access**. You can also send `/start web`.
+  </Step>
+  <Step title="Open it">
+    The bot sends a new message with **Open Lance Trade**. The link works once, for 10 minutes.
+  </Step>
+  <Step title="Continue">
+    Lance Trade opens at `app.lancetrade.xyz`. Tap **Continue** to sign in this browser.
+  </Step>
+</Steps>
+
+<Frame caption="Example screen. Lance Trade shows the steps to sign in from your own community's bot.">
+  <img src="/images/screens/trade-signin.webp" alt="Example Lance Trade sign-in sheet with steps for signing in from Telegram, and Dark and Light themes" style={{ maxWidth: "340px", margin: "0 auto" }} />
+</Frame>
+
+You stay signed in on that browser for 30 days. Your bot posts a message naming the device and roughly where it signed in from, with **Sign out this browser** in case it wasn't you.
+
+Next time, Lance Trade offers a **Sign in with @yourbot** button that takes you straight to your bot for a fresh link.
+
+## If the link has expired
+
+Sign-in links last 10 minutes and work once. Tap **🌐 New link** in the bot, or **Get a new link** in Lance Trade, which opens your bot.
+
+<Info>
+  Lance Trade never holds your trading key. Your orders go through your community's bot, with the same rules and checks as in Telegram. See [How Lance works](/how-it-works#lance-trade-holds-no-keys).
+</Info>
+
+<RiskWarning />
