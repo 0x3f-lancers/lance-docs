@@ -13,7 +13,7 @@ These docs are public. Don't document internals: hosting, environment variables,
 
 Every claim must match the product today. Facts come from the private `0x3f-lancers/lance-bot` repo: `apps/bot/README.md`, `apps/trade/README.md`, `apps/app/README.md` and the landing page config in `apps/web/lib/`. If a feature isn't live, leave it out; don't write "coming soon".
 
-`legal/terms.mdx` and `legal/privacy.mdx` are Lance's published Terms of Service and Privacy Policy. Change their wording only when the policies change, and give them a new effective date when you do. The rule against documenting internals doesn't apply to them: the Privacy Policy has to name our hosting providers and say what staff and community owners can see. Keep `legal/restricted-regions.mdx` in step with section 3 of the Terms.
+The Terms of Service and Privacy Policy live on the website, at lancetrade.xyz/terms and lancetrade.xyz/privacy (from `apps/web/content/` in the monorepo). Don't copy their text into these docs: `legal/terms.mdx` and `legal/privacy.mdx` only link to them. Keep `legal/restricted-regions.mdx` in step with section 3 of the Terms.
 
 ## Compliance rules
 

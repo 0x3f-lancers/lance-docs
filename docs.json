@@ -38,7 +38,7 @@
       },
       {
         "label": "Book a demo",
-        "href": "https://lancers.technology/contact"
+        "href": "https://telegram.me/bhargav2495"
       }
     ],
     "primary": {
@@ -114,7 +114,7 @@
   "footer": {
     "socials": {
       "x": "https://x.com/0xLancersT",
-      "telegram": "https://telegram.me/bhargav2495",
+      "telegram": "https://t.me/lancetradeofficial",
       "linkedin": "https://www.linkedin.com/company/lancerst",
       "github": "https://github.com/0x3f-lancers"
     },
@@ -125,22 +125,22 @@
           { "label": "Website", "href": "https://lancetrade.xyz" },
           { "label": "Lance Trade", "href": "https://app.lancetrade.xyz" },
           { "label": "Example bot", "href": "https://telegram.me/Northstar123bot" },
-          { "label": "Book a demo", "href": "https://lancers.technology/contact" }
+          { "label": "Book a demo", "href": "https://telegram.me/bhargav2495" }
         ]
       },
       {
         "header": "Legal",
         "items": [
           { "label": "Risk disclosure", "href": "/legal/risk-disclosure" },
-          { "label": "Terms of Service", "href": "/legal/terms" },
-          { "label": "Privacy Policy", "href": "/legal/privacy" },
+          { "label": "Terms of Service", "href": "https://lancetrade.xyz/terms" },
+          { "label": "Privacy Policy", "href": "https://lancetrade.xyz/privacy" },
           { "label": "Restricted regions", "href": "/legal/restricted-regions" }
         ]
       },
       {
         "header": "Lancers Technology",
         "items": [
-          { "label": "About", "href": "https://lancers.technology/" },
+          { "label": "About", "href": "https://lancers.technology/about" },
           { "label": "Services", "href": "https://lancers.technology/services" },
           { "label": "Contact", "href": "https://lancers.technology/contact" }
         ]
@@ -148,7 +148,7 @@
     ]
   },
   "redirects": [
-    { "source": "/legal/terms-and-privacy", "destination": "/legal/privacy" }
+    { "source": "/legal/terms-and-privacy", "destination": "https://lancetrade.xyz/privacy" }
   ],
   "search": {
     "prompt": "Search the Lance docs"
