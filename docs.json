@@ -105,7 +105,7 @@
           },
           {
             "group": "Legal",
-            "pages": ["legal/risk-disclosure", "legal/restricted-regions", "legal/terms-and-privacy"]
+            "pages": ["legal/risk-disclosure", "legal/restricted-regions", "legal/terms", "legal/privacy"]
           }
         ]
       }
@@ -132,8 +132,8 @@
         "header": "Legal",
         "items": [
           { "label": "Risk disclosure", "href": "/legal/risk-disclosure" },
-          { "label": "Terms of Service", "href": "https://lancers.technology/legal?tab=tos" },
-          { "label": "Privacy Policy", "href": "https://lancers.technology/legal?tab=privacy" },
+          { "label": "Terms of Service", "href": "/legal/terms" },
+          { "label": "Privacy Policy", "href": "/legal/privacy" },
           { "label": "Restricted regions", "href": "/legal/restricted-regions" }
         ]
       },
@@ -147,6 +147,9 @@
       }
     ]
   },
+  "redirects": [
+    { "source": "/legal/terms-and-privacy", "destination": "/legal/privacy" }
+  ],
   "search": {
     "prompt": "Search the Lance docs"
   },
