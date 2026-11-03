@@ -1,37 +1,86 @@
 ---
-title: "Your bot's settings"
-description: "What you can set for your community, and how pausing works."
+title: "Community settings"
+description: "What you change yourself from your bot, what Lance sets for you, and how pausing works."
 icon: "sliders"
 ---
 
 import RiskWarning from "/snippets/risk-warning.mdx";
 
-The Lance team sets these for you. Message us with what you want changed, and it applies to your members' next message.
+As an owner, tap **🤝 Partner dashboard** on Home (or send `/stats`), then **🎛 Community settings**. Only owners can open it, and every change is logged. Changes apply to your members' next message, in Telegram and in Lance Trade.
 
-| Setting | What it does |
-| --- | --- |
-| **Name** | Your bot's name in Telegram. Changing it renames the bot. |
-| **Welcome line** | The first thing members read when they start the bot. |
-| **Markets** | Which crypto perps your members can trade, and which show first. |
-| **Leverage cap** | The highest leverage members can pick. |
-| **Starting leverage** | The leverage picked first for new members. |
-| **Largest order** | The biggest single order a member can place. |
-| **Quick amounts** | The one-tap amounts on each market's card. |
-| **Price limit (slippage)** | How far from the current price a market order may fill. It also decides when Long or Short is switched off for a thin order book. |
-| **Owners** | Who sees your stats. We send each new owner a one-time invite link. |
+## Switch features on or off
 
-The same rules apply in Telegram and in Lance Trade.
+Each feature has a switch (✅ on, ⬜️ off). Switching one off hides it in your bot and in Lance Trade. It never closes anyone's positions.
 
-## Pausing your bot
+| Feature | Starts | What it is |
+| --- | --- | --- |
+| **Chart comments** | On | Members comment on Lance Trade's charts. See [Members and moderation](/owners/moderation#chart-comments). |
+| **Following** | On | Members follow public Hyperliquid wallets. See [Follow wallets](/telegram/follow-wallets). |
+| **Price alerts** | On | Members set alerts on a market's price. See [Alerts](/telegram/alerts#price-alerts). |
+| **Share cards** | On | Members share an image of a closed trade. See [Your stats and limits](/account/stats-and-limits#share-cards). |
+| **Leaderboard** | Off | A ranking of your members. See [Leaderboard](#leaderboard). |
+| **Group members only** | Off | Only members of your Telegram group can open trades. See [Your group](/owners/moderation#your-group). |
 
-We can pause your bot at your request. While it's paused:
+## Your settings
 
-- the bot still answers and tells members it's paused;
-- members can't open new trades;
-- it sends no alerts;
-- members' resting orders, take profits and stop losses stay on Hyperliquid and can still fill;
-- members can cancel orders and take profits and stop losses in Lance Trade, and sign browsers out.
+| Setting | What it does | Starts at |
+| --- | --- | --- |
+| **👋 Welcome** | A line new members read under your community's name, before they connect. Plain text, up to 300 characters. | None |
+| **⚡ Amounts** | The one-tap order sizes on every market's card: 1 to 4 amounts, within Lance's smallest and largest order. Pick a preset or type your own, such as `20 50 100`. | $20 · $50 · $100 |
+| **🎚 Max leverage** | The highest leverage your members can pick: 1x, 2x, 3x, 5x, 10x, 15x, 20x, 25x or 40x. A market with a lower limit on Hyperliquid stops at its own. | 5x |
+| **📐 Preselected leverage** | The leverage new members start with, up to your max. | 2x |
+| **🛡 Risk limits** | Limits for every member, on top of Lance's largest order. See below. | Off |
 
-Members can always manage their positions directly on Hyperliquid with their wallet.
+Lowering the max leverage also brings the preselected leverage, and any member's own choice, down to it.
+
+### Risk limits
+
+Tap **🛡 Risk limits**. All of them start off.
+
+| Limit | Options | What it does |
+| --- | --- | --- |
+| **📏 Largest position, each market** | $1k to $50k | The most a member can hold on one market, all their orders added up. |
+| **📊 New positions in 24 hours** | $1k to $100k | The most a member can open in any 24 hours, added up. A refused order says when it fits again. |
+| **🧊 Cool-off after losses in a row** | 2 to 5 losses | After that many losing closes in a row (after fees), new trades pause. A win ends the run. |
+| **⏱ Cool-off length** | 1, 4, 12 or 24 hours | How long the cool-off lasts, from the last losing close. |
+
+Closing, take profits, stop losses and cancelling always work. The limits count trades placed through your bot: trades made on Hyperliquid itself, and limit orders that rest and fill later, don't count. Members see your limits under **🧱 Your limits**.
+
+## What Lance sets
+
+Message the Lance team to change these:
+
+- **Markets**: which crypto perps your members can trade, and which show first.
+- **Largest order**: the biggest single order a member can place.
+- **Price limit (slippage)**: how far from the current price a market order may fill. It also decides when Long or Short is switched off for a thin order book.
+- **Your bot's name**, and your share of the bot fee.
+- **Owners**: we send each new owner a one-time invite link, which works once, within 7 days.
+
+## Pause new orders
+
+Tap **⏸ Pause new orders** to stop members opening or adding to positions, in Telegram and in Lance Trade. While it's paused:
+
+- members' Home says you've paused new orders;
+- closing positions, changing take profits and stop losses, and cancelling orders work as usual;
+- resting orders, take profits and stop losses stay on Hyperliquid and can still fill.
+
+Tap **▶️ Resume new orders** to open trading again.
+
+<Note>
+  Lance can also pause a whole bot, for example for maintenance. Then the bot only answers that it's paused, and sends no alerts. Members can still close positions and cancel orders in Lance Trade, sign browsers out, and manage everything on Hyperliquid with their wallet.
+</Note>
+
+## Leaderboard
+
+Tap **🏆 Leaderboard** to switch on a ranking of your members. They then find **🏆 Leaderboard** on Home, `/leaderboard`, and a Leaderboard page in Lance Trade.
+
+- **Who's ranked**: members with a wallet connected, who traded through your bot in the last 30 days and haven't hidden themselves. They show under the name they chose for chart comments, or an anonymous tag such as `Trader 7F3A`, never their Telegram username.
+- **What counts**: each member's whole Hyperliquid perps account over 24 hours, 7 days, 30 days or all time, open and closed positions, after fees and funding. Trades made elsewhere and liquidations count too.
+- **Ranked by**: **Return %** (the default, showing percentages only, from $50 at work) or **PnL $**.
+- **Group posts**: with a [linked group](/owners/moderation#your-group), the top 10 can be posted there daily or weekly (Mondays), at 09:00, 12:00, 18:00 or 21:00 in your time zone. Posts need at least 3 ranked members. **👀 Preview post** sends it to you first; **📣 Post now** posts it at once.
+
+<Warning>
+  Don't offer prizes for the leaderboard, and don't present it as a measure of skill or a reason to trade more. Trading perps is high risk.
+</Warning>
 
 <RiskWarning />

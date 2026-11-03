@@ -1,0 +1,112 @@
+---
+title: "Lance wallet"
+description: "A new wallet for your community's bot that only your phone's lock can take money out of. No wallet app needed."
+icon: "bolt"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+A **Lance wallet** is a new Hyperliquid wallet just for your community's bot. You open it with your phone's lock (the PIN, Face ID or fingerprint you unlock it with), so you don't need MetaMask or any other wallet app.
+
+<Note>
+  Lance wallets are on Hyperliquid **testnet** only for now. Connecting [your own wallet](/telegram/connect-wallet) is still the most secure way, and the one we recommend for serious trading. Send a Lance wallet only what you want to trade.
+</Note>
+
+## How it works
+
+- **Your devices own it.** When you create the wallet, your phone makes a **passkey**: a key that stays on your device and only works after your phone's lock. Only a passkey can take money out. Lance never sees your PIN, face or fingerprint: your phone checks them.
+- **Lance can only trade.** Lance can approve the bot's trading key and the bot fee for the wallet, and nothing else. It can't withdraw, send funds or export the wallet's key. That limit is held by a policy Lance's own servers can't change.
+- **Trading turns on by itself.** Once money arrives, the bot approves its trading key and turns trading on, with no signature from you. It also renews the key before it expires.
+
+## Create your Lance wallet
+
+<Steps>
+  <Step title="Choose Lance wallet">
+    In your community's bot, tap **⚡ Set up trading** (or any trade button), then **⚡ Create a Lance wallet**.
+  </Step>
+  <Step title="Open the wallet page">
+    Tap **🔐 Open the wallet page**. It opens `connect.lancetrade.xyz/wallet`. If the address is anything else, stop.
+
+    On an iPhone, open it in **Safari or Chrome**: Telegram's own browser can't use Face ID or passkeys there. Use the ⋯ menu to open it in Safari, or tap **📋 Copy link** and paste it.
+  </Step>
+  <Step title="Confirm with your phone's lock">
+    Your phone asks for its PIN, Face ID or fingerprint, and saves the passkey.
+  </Step>
+  <Step title="Go back to Telegram">
+    When the page says the wallet is ready, tap **Back to Telegram**, or send the bot the code the page shows. The code only works from your own Telegram account. The link works for 30 minutes.
+  </Step>
+</Steps>
+
+## Add money
+
+Send `/wallet`, or tap **⚡ Lance wallet** in **🔐 Wallet and access**, for your wallet's address. Then, from the Hyperliquid account you already use, send USDC to that address. While Lance is on testnet, send test USDC.
+
+You can send it to perps or to spot: the bot sets your Lance wallet to Hyperliquid's unified account mode, where one USDC balance backs your trades, so you never need to move money between them.
+
+Trading turns on by itself as soon as the money arrives, and the bot tells you. Tap **🔄 Check now** to check straight away.
+
+## Withdraw
+
+<Steps>
+  <Step title="Tap 💸 Withdraw">
+    On your Lance wallet's screen, or in **🔐 Wallet and access**. The bot shows how much you can withdraw: your balance less the margin your open positions use.
+  </Step>
+  <Step title="Pick where to">
+    - **➡️ To a Hyperliquid account**, such as your main wallet: arrives at once, no fee.
+    - **➡️ To Arbitrum**: Hyperliquid takes a 1 USDC fee.
+
+    Then paste the address and type the amount.
+  </Step>
+  <Step title="Confirm on the wallet page">
+    Tap **🔐 Confirm on the wallet page**. Check that the page shows the same amount and address, then confirm with your phone's lock. The link works for 30 minutes.
+  </Step>
+</Steps>
+
+## Add a device
+
+If you lose your only device, you lose the passkey. Add a second one, such as your laptop, so that doesn't lose the wallet.
+
+Tap **➕ Add a device**, and open the link on the other device. It makes its own passkey, then you approve it with a device the wallet already has. A laptop may show a QR code to scan with your phone. A wallet can have up to 5 devices, and any one of them can withdraw.
+
+## Export the key
+
+Tap **🔑 Export key** to use the wallet in another app, such as MetaMask or Rabby, without Lance. Open the wallet page and confirm with your phone's lock.
+
+The key is sealed to your browser, so Lance never sees it. The page shows it once you tap reveal, for **one minute**, then wipes it. Copy it in time; seeing it again takes a new link and your passkey again.
+
+<Warning>
+  Anyone with this key can take all the money in the wallet, and the bot can't stop them. Never send it to anyone or type it into a website. Lance will never ask for it.
+</Warning>
+
+## Lost your Telegram account?
+
+You can move your Lance wallet to a new Telegram account with any of its passkeys.
+
+<Steps>
+  <Step title="Start your community's bot from the new account">
+    It must be the same community's bot. Tap **🔁 Recover my Lance wallet** in setup.
+  </Step>
+  <Step title="Use a passkey">
+    Open the wallet page and use a passkey your wallet has: on this phone, synced from your other devices, or on another device through a QR code.
+  </Step>
+  <Step title="Wait 24 hours">
+    The bot tells your old account straight away. If nobody cancels, the wallet moves to your new account 24 hours later, and the old account can't trade with it any more.
+  </Step>
+</Steps>
+
+Your money stays in the wallet the whole time. If you get a message that your wallet is moving and it wasn't you, tap **🛑 Cancel the move**, then check who can use your devices.
+
+You can't recover a wallet into an account that already has a Lance wallet, into another community's bot, or for a wallet whose account was banned from the bot.
+
+## Lance wallet or your own wallet?
+
+| | Your own wallet | Lance wallet |
+| --- | --- | --- |
+| **You need** | A wallet app such as MetaMask, with your main Hyperliquid wallet | A phone with a lock |
+| **Who can withdraw** | You, with your wallet | You, with a passkey on one of your devices |
+| **What Lance can do** | Trade with its trading key | Trade with its trading key |
+| **Signatures to start** | Three, on the approval page | One, to create the wallet |
+| **Key renewal** | You sign every 180 days | The bot renews it for you |
+| **Best for** | Serious trading | Trading without a wallet app |
+
+<RiskWarning />

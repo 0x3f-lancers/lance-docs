@@ -1,0 +1,66 @@
+---
+title: "Members and moderation"
+description: "Find members, ban or mute them, moderate chart comments, and limit trading to your Telegram group."
+icon: "user-shield"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+## Members
+
+In **🎛 Community settings**, tap **👤 Members** for your newest members, the most active over the last 30 days, and anyone banned. **🔎 Find a member** searches by @username or Telegram id.
+
+A member's screen shows their Telegram, wallet, when they joined, their trades, whether they're in your group, and whether they can comment. From there you can **🚫 Ban**, **🔇 Mute 24h** or **🔊 Unmute** them.
+
+## Ban a member
+
+Tap **🚫 Ban** on their screen. You can add a reason of up to 200 characters, which only owners see. Owners can't be banned. The other owners are told.
+
+A banned member:
+
+- can't use your bot at all. Whatever they send gets one message, at most once an hour, saying so and pointing them to Hyperliquid, where they can see, close or withdraw their funds and remove the bot's trading key;
+- is signed out of Lance Trade, and can't sign in again;
+- still gets alerts about their take profits, stop losses and liquidation risk;
+- is ignored in your linked group.
+
+Their funds and positions stay in their own Hyperliquid account. Tap **✅ Unban** to let them back in.
+
+## Chart comments
+
+Members comment on Lance Trade's charts. A comment can be up to 280 characters, with at most one every 15 seconds and 60 a day each.
+
+**In Telegram**, send `/comments` or tap **💬 Comments** for the latest comments on every market. Tap **🗑** on one to remove it for everyone, or **🔊 Unmute** a muted member.
+
+When a member reports a comment, you get a message with **🗑 Remove**, **🔇 Mute 24h** and **Dismiss**. Each comment reaches you at most once a day, however many members report it.
+
+**In Lance Trade**, owners can remove any comment from the chart's comment panel, and mute its writer for 1 hour, 24 hours, 7 days or until lifted. Muted members can still read comments. Owners can't be muted.
+
+## Your group
+
+Link your Telegram group so you can limit trading to its members, and post the [leaderboard](/owners/bot-settings#leaderboard) there.
+
+<Steps>
+  <Step title="Open the group screen">
+    In **🎛 Community settings**, tap **👥 Link your group**.
+  </Step>
+  <Step title="Add the bot to your group">
+    Tap **➕ Add to my group** and pick the group. You must be one of its admins. Keep **Invite users** ticked, so the bot can make a join link for members.
+
+    Or add the bot to the group yourself and send `/linkgroup` there.
+  </Step>
+  <Step title="Confirm in the bot">
+    Back in your private chat with the bot, tap **✅ Link**.
+  </Step>
+</Steps>
+
+Linking alone changes nothing for members. To limit trading to the group, switch on **Group members only**.
+
+### Group members only
+
+With it on, members outside the group see **🔒 Join your group to trade here** on Home and when they try to open a trade, with a button to join (when the bot can make a join link) and **✅ I've joined, check again**. They can still close positions, change take profits and stop losses, and cancel orders. Owners always pass.
+
+The bot checks membership when someone trades, at most every 6 hours, and straight away when someone joins or leaves while the bot is a group admin.
+
+If the bot loses access to the group, the check is skipped so members aren't locked out, and you get a message. **🔄 Check group** checks again. **Unlink group** also switches Group members only off.
+
+<RiskWarning />

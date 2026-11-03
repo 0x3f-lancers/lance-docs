@@ -1,0 +1,72 @@
+---
+title: "Your stats and limits"
+description: "Your own results after fees and funding, limits you set for yourself, and share cards."
+icon: "chart-pie"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+## Your stats
+
+Send `/mystats` for **📅 Your stats**, month by month. Only you see it.
+
+| Figure | What it is |
+| --- | --- |
+| **Net** | Your result after fees and funding |
+| **Realized PnL** | Your result before fees and funding |
+| **Fees** | Hyperliquid's fees and the bot fee together |
+| **Funding** | Funding paid and received |
+| **Volume** | The size of all your trades |
+| **Round trips** | Positions you opened and closed |
+| **Average hold** | How long you held a position, on average |
+
+It also splits your results by market and by long or short. Use ◀ and ▶ to move between months, and open a day to see its trades, write yourself a **📝 Note**, or **🖼 Share** it.
+
+In Lance Trade, open **Portfolio**, then **Your stats**, for the last 7, 30 or 90 days.
+
+## Net PnL on every close
+
+When you close a position, the bot shows what it cost you:
+
+| Row | What it is |
+| --- | --- |
+| **PnL before fees** | The price move on your position |
+| **Fee to open** | Hyperliquid's fee and the bot fee when you opened |
+| **Fee to close** | The same when you closed |
+| **Funding** | What you paid or received while it was open |
+| **Net PnL** | What's left after all of them |
+
+A figure marked "(est.)" is an estimate. For a partial close, the fee to open and the funding are that part's share. Lance Trade shows the same.
+
+## Your limits
+
+Send `/limits`, or tap **🧱 Your limits** in **⚙️ Settings**. In Lance Trade, it's **Your limits** in the Account sheet. Only you see them, and they apply in the bot and in Lance Trade.
+
+| Limit | What it does |
+| --- | --- |
+| **🧯 Daily loss limit** | Stops new trades once you've lost this much in the last 24 hours |
+| **🎚 Max leverage** | The highest leverage you can pick, below your community's cap |
+| **📏 Max order size** | The biggest single order you can place |
+| **⏸ Pause after a liquidation** | No new trades for 1, 4 or 24 hours after a liquidation |
+| **🪞 Max copy trades a day** | How many [copy trades](/telegram/follow-wallets#copy-a-trade) you can place a day |
+
+Making a limit **tighter** applies at once. Making it **looser** waits 24 hours, so a bad moment can't undo it; **↩️ Keep my current limits** cancels the change. Closing a position, take profits, stop losses and cancelling orders always work.
+
+Your community's owners may set limits for everyone too. You see them on the same screen.
+
+## Share cards
+
+Tap **🖼 Share** on a position or a day, or **🖼 Share result** on a closed trade, for an image to post. Before you share, choose:
+
+- **💵 Show $** or hide your result in dollars (hidden at first);
+- **🙈 Hide prices** or show them;
+- **☀️ Light** or **🌙 Dark**;
+- **🔗 Copy bot link**, to share your community's bot with it.
+
+In Lance Trade, **Share a card** has the same choices. Your community's owners can switch share cards off.
+
+<Warning>
+  A card shows one result, not your whole record. Don't post it as a promise of what others will make.
+</Warning>
+
+<RiskWarning />

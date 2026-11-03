@@ -1,0 +1,87 @@
+---
+title: "Follow wallets"
+description: "Get a message when a public Hyperliquid wallet opens or closes a position, and copy a trade only after you review it."
+icon: "eye"
+---
+
+import RiskWarning from "/snippets/risk-warning.mdx";
+
+Every Hyperliquid wallet's positions are public. You can follow up to 10 wallets and get a message from your bot when one opens, adds to, reduces, flips or closes a position.
+
+**Nothing is ever copied by itself.** Copy trade always opens a review that you confirm, even with one-tap trading on.
+
+<Note>
+  Wallet activity is for information only. It's not a recommendation, and a wallet's past trades say nothing about its next ones. Your community's owners can switch Following off for their bot.
+</Note>
+
+## Follow a wallet
+
+In the bot, tap **👁 Wallets** on Home (or send `/wallets`), then **➕ Follow wallet** and paste the address. Or send it directly: `/follow 0x…`, optionally followed by a name. The first time, the bot explains what following is and asks you to tap **I understand**.
+
+In Lance Trade, open **Wallets** and tap **Follow wallet**.
+
+Your community's owners may also list up to 5 wallets whose owners agreed to be listed. Those show as **Listed by** your community.
+
+## Choose what you hear about
+
+Open a wallet from **👁 Wallets** to change:
+
+| Option | Choices |
+| --- | --- |
+| **Messages** | All changes, opens and closes only, or off |
+| **Min size** | Any, $1K, $10K or $100K: smaller changes don't message you |
+| **🔕 Mute 8 h** | No messages from that wallet for 8 hours. **🔔 Unmute** ends it early. |
+| **✏️ Name it** | A private name for the wallet, up to 24 characters. Only you see it. |
+
+In **⚙️ Settings**, **🌙 Quiet hours** holds wallet messages overnight (for example 23:00 to 07:00), and **👁 Copy trades** has **🔔 Wallet activity** to switch all of them off.
+
+When many changes come at once, the bot sends them together. A wallet that trades a lot gets one summary an hour for a while, instead of a message per change.
+
+## What a message shows
+
+**👁 Wallet activity** names the wallet and what changed, such as "Opened BTC long · 5x cross", with the size, price and time, and whether you hold a copy. Its buttons:
+
+- **Copy trade**, for an open, an add or a flip;
+- **Close my BTC position**, when the wallet reduced or closed a position you also hold;
+- **📈 BTC**, to open the market, and **👁 Open wallet**.
+
+In Lance Trade, a wallet's page shows its positions and activity, updated every 10 seconds.
+
+## Copy a trade
+
+Tap **Copy trade** on a message, or on the wallet's page in Lance Trade. You see a review before anything is placed:
+
+- their price and the price now;
+- the size, sized by your copy settings, with size chips to change it;
+- the estimated liquidation price;
+- the fee, including the bot fee (0.05% of the position size, illustrative until final fees are confirmed);
+- your take profit and stop loss, if you use them.
+
+Tap **✅ Confirm** to place it, or **Cancel**. You place every copy yourself, as your own trade, within your community's rules and your own limits.
+
+| How old the change is | What happens |
+| --- | --- |
+| Up to 10 minutes | You review and confirm as usual. |
+| 10 minutes to 24 hours | The review first shows how far the price has moved, or how long ago it was. You tap **review anyway** to go on. |
+| Over 24 hours | It can't be copied. |
+
+A copy below Hyperliquid's $10 minimum offers **Use $10**.
+
+## Copy trade settings
+
+Tap **⚙️ Copy trade settings** on the Wallets screen, or **👁 Copy trades** in **⚙️ Settings**. In Lance Trade, it's under **Copy trade settings** in the Account sheet.
+
+| Setting | Choices | Starts at |
+| --- | --- | --- |
+| **Size** | A fixed amount, or 1%, 2%, 5% or 10% of your account | Your usual order size |
+| **Max leverage** | Up to your community's cap | Your usual leverage |
+| **Max price gap** | 0.5%, 1%, 2% or 5% from the wallet's price | 1% |
+| **TP/SL** | Your own take profit and stop loss levels, or none | Yours |
+
+To limit how many copies you can place a day, use **🪞 Max copy trades a day** in [Your limits](/account/stats-and-limits#your-limits).
+
+<Warning>
+  Copying someone doesn't copy their results. Your entry price, size, leverage and fees differ from theirs, and you can lose all the money you put in.
+</Warning>
+
+<RiskWarning />

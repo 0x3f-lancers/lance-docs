@@ -25,7 +25,27 @@ import RiskWarning from "/snippets/risk-warning.mdx";
     Smart-contract wallets can't connect, because the bot can't check their signatures. Use a regular wallet such as MetaMask.
   </Accordion>
   <Accordion title="There's no wallet on my phone">
-    Tap **🦊 Open in MetaMask app** in the bot instead of **🔗 Open approval page**. The page then opens inside MetaMask, where your wallet is available.
+    On a phone, a wallet only works inside its own app's browser. The approval page offers to reopen itself in MetaMask, Trust Wallet, Coinbase Wallet, OKX Wallet or Bitget Wallet. With MetaMask, you can also tap **🦊 Open in MetaMask** in the bot. No wallet app at all? Use a [Lance wallet](/account/lance-wallet).
+  </Accordion>
+  <Accordion title="The page says Lance isn't available where I am">
+    Connecting a wallet and signing in to Lance Trade are refused from the countries Lance isn't offered in. See [Restricted regions](/legal/restricted-regions).
+  </Accordion>
+</AccordionGroup>
+
+## Lance wallet
+
+<AccordionGroup>
+  <Accordion title="Face ID or my passkey doesn't work on iPhone">
+    Telegram's own browser on iPhone can't use Face ID or passkeys. Open the wallet page in Safari or Chrome: use the ⋯ menu to open it in Safari, or tap **📋 Copy link** in the bot and paste it there.
+  </Accordion>
+  <Accordion title="I sent money but trading isn't on yet">
+    The bot checks new Lance wallets every minute. Tap **🔄 Check now** on your **⚡ Lance wallet** screen to check straight away.
+  </Accordion>
+  <Accordion title="I lost my phone">
+    Any other device you added can still withdraw. If you lost your Telegram account too, see [Lost your Telegram account?](/account/lance-wallet#lost-your-telegram-account).
+  </Accordion>
+  <Accordion title="I got a message that my wallet is moving">
+    Someone used one of your wallet's passkeys to move it to another Telegram account. If it wasn't you, tap **🛑 Cancel the move** within 24 hours, then check who can use your devices.
   </Accordion>
 </AccordionGroup>
 
@@ -44,8 +64,17 @@ import RiskWarning from "/snippets/risk-warning.mdx";
   <Accordion title="Lance Trade says to use a different leverage">
     Hyperliquid keeps one leverage per market. With a position or resting orders in that market, new orders must use the same leverage. Tap **Use Nx** where it's offered.
   </Accordion>
+  <Accordion title="My bot says new orders are paused">
+    Your community's owners have paused new orders. Closing positions, take profits, stop losses and cancelling orders work as usual. Resting orders stay on Hyperliquid and can still fill.
+  </Accordion>
   <Accordion title="My bot says it's paused">
-    Your community owner has paused trading. You can still cancel open orders, take profits and stop losses in Lance Trade, and sign browsers out. Resting orders stay on Hyperliquid and can still fill. You can always manage your positions directly on Hyperliquid with your wallet.
+    Lance has paused your community's bot. You can still close positions and cancel orders in Lance Trade, and sign browsers out. Resting orders stay on Hyperliquid and can still fill. You can always manage your positions directly on Hyperliquid with your wallet.
+  </Accordion>
+  <Accordion title="My bot says to join a group to trade">
+    Your community only lets members of its Telegram group open trades. Join the group, then tap **✅ I've joined, check again**. Closing and cancelling work as usual.
+  </Accordion>
+  <Accordion title="A trade was refused because of a limit">
+    It's either a risk limit your community's owners set, or one of [your own limits](/account/stats-and-limits#your-limits). The message says which, and when the order fits again. Closing always works.
   </Accordion>
 </AccordionGroup>
 

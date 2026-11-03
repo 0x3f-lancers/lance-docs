@@ -40,6 +40,10 @@ Hyperliquid lets an API wallet sign any trading action on your account. Besides 
 - The bot only connects the wallet that signed, and only for a one-time code sent from that same Telegram account. A forwarded link can't connect someone else's wallet to your account.
 - Lance Trade sign-in links work once, for 10 minutes, and every new browser is announced in your chat.
 
+## With a Lance wallet
+
+A [Lance wallet](/account/lance-wallet) is owned by passkeys on your own devices, unlocked with your phone's PIN, Face ID or fingerprint. Lance is an extra signer on it, limited by a policy to approving the bot's trading key and the bot fee. Withdrawals, transfers and exporting the key all need one of your passkeys. The policy can only be changed with keys kept away from Lance's servers, so the bot can't widen what Lance can do.
+
 ## Trades stay private
 
 You trade in a private chat with the bot, or in your own Lance Trade session, never in a group. Nobody can trade for you by posting a command in your community's group.
@@ -47,7 +51,7 @@ You trade in a private chat with the bot, or in your own Lance Trade session, ne
 ## Take access back at any time
 
 - In the bot: **🔐 Wallet and access**, then **Remove access**. See [Remove access](/account/wallet-and-access#remove-access).
-- On Hyperliquid: revoke the bot's key yourself, without going through the bot.
+- On Hyperliquid: cancel the bot's key and fee approval with one signature each at `connect.lancetrade.xyz/remove`, or revoke the key yourself on Hyperliquid, without going through the bot.
 
 <Warning>
   No software is free of risk. Use a wallet you're comfortable trading from, keep your seed phrase offline, and only use the [official links](/safety/official-links).

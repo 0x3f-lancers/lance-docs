@@ -55,6 +55,19 @@ The bot checks Hyperliquid's order book before you trade. If nobody is selling (
 
 Positions show on Home and on each market's card, with size, PnL, return and liquidation price. To close, open the position's card and tap **Close all** or **Close 50%**, or type `close btc` or `close btc 50%`.
 
+When a position closes, the bot shows the PnL before fees, the fee to open and to close, funding, and your **Net PnL** after all of them. See [Net PnL on every close](/account/stats-and-limits#net-pnl-on-every-close).
+
+## Tools for all your positions
+
+While you have positions open, Home has:
+
+- **⏹ Close all**: close 25%, 50% or all of every position at once. The review shows each one with its estimated net result, and nothing closes until you tap **✅ Close**. If one fails, the receipt offers **↻ Retry**.
+- **✖️ Cancel orders**: cancel your resting orders. Take profits and stop losses stay unless you tick them too.
+
+## Stop to breakeven
+
+Once a position is past breakeven, its card offers **🛡 Stop to breakeven**: it moves your stop loss to your entry price plus the fees both ways (about 0.19% from entry, with Hyperliquid's 0.045% taker fee and the 0.05% bot fee, illustrative). You see the price before you confirm.
+
 Telegram places market orders. For limit orders, use [Lance Trade](/lance-trade/trade-on-the-web).
 
 <RiskWarning />

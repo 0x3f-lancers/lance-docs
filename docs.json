@@ -54,7 +54,7 @@
         "groups": [
           {
             "group": "Get started",
-            "pages": ["index", "how-it-works", "quickstart"]
+            "pages": ["index", "how-it-works", "quickstart", "learn"]
           },
           {
             "group": "Trade in Telegram",
@@ -64,6 +64,7 @@
               "telegram/take-profit-stop-loss",
               "telegram/type-your-trades",
               "telegram/alerts",
+              "telegram/follow-wallets",
               "telegram/settings"
             ]
           },
@@ -72,8 +73,12 @@
             "pages": ["lance-trade/sign-in", "lance-trade/trade-on-the-web", "lance-trade/devices"]
           },
           {
+            "group": "Your community",
+            "pages": ["community/leaderboard", "community/chart-comments"]
+          },
+          {
             "group": "Your account",
-            "pages": ["account/wallet-and-access", "account/fees"]
+            "pages": ["account/wallet-and-access", "account/lance-wallet", "account/stats-and-limits", "account/fees"]
           },
           {
             "group": "Help",
@@ -89,9 +94,10 @@
             "pages": [
               "owners/overview",
               "owners/launch",
-              "owners/fees-and-your-share",
+              "owners/bot-settings",
+              "owners/moderation",
               "owners/stats",
-              "owners/bot-settings"
+              "owners/fees-and-your-share"
             ]
           }
         ]

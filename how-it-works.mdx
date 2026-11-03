@@ -39,10 +39,12 @@ Your bot makes a trading key just for you and sends you a link to the approval p
 
 Your wallet's own keys never leave your wallet. [Connect your wallet](/telegram/connect-wallet) walks through it step by step.
 
+**With a Lance wallet** instead, there's no approval page to sign: you confirm once with your phone's lock to create the wallet, send it USDC, and the bot approves its trading key and the bot fee by itself. Only passkeys on your devices can withdraw. See [Lance wallet](/account/lance-wallet).
+
 ## When you trade
 
 1. You pick a market, a size and a leverage, in Telegram or in Lance Trade.
-2. The bot checks the order against your community's rules: allowed markets, the leverage cap and the largest order size.
+2. The bot checks the order against your community's rules: allowed markets, the leverage cap, the largest order size and any risk limits, plus your own limits if you set some.
 3. It checks Hyperliquid's order book. If nobody can fill your side within your community's price limit, it says so instead of sending the order.
 4. You see a review with the bot fee before you confirm, unless you switched on one-tap trading.
 5. The bot places the order on Hyperliquid with your trading key, then shows the fill with Hyperliquid's fee and the bot fee.

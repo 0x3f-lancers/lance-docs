@@ -1,10 +1,14 @@
 ---
 title: "Alerts"
-description: "Messages from your bot when an exit fills or a position nears liquidation."
+description: "Messages from your bot when an exit fills, a position nears liquidation, or a price you picked is reached."
 icon: "bell"
 ---
 
 import RiskWarning from "/snippets/risk-warning.mdx";
+
+Your bot sends three kinds of alerts: about your positions, about prices you choose, and about [wallets you follow](/telegram/follow-wallets).
+
+## Position alerts
 
 Your bot watches your Hyperliquid account and messages you when:
 
@@ -15,16 +19,27 @@ Your bot watches your Hyperliquid account and messages you when:
 | **Close to liquidation** | A first warning as the price nears your liquidation price, and an urgent one when it gets very close. You hear again only after the position has moved away and back. |
 | **Liquidated** | A position was liquidated. |
 
-## Turn alerts on or off
+### Turn position alerts on or off
 
 Open [Settings](/telegram/settings) and tap **🔕 Turn alerts off** or **🔔 Turn alerts on**. Exits the bot placed still work while alerts are off; you just don't get the messages.
 
+## Price alerts
+
+Get a message when a market reaches a price you pick.
+
+- **In the bot:** tap **🔔 Alerts** on Home or **🔔 Alert** on a market's card. Pick a level such as **▲ +5%** or **▼ −2%** from the current price, or **✏️ Type a price**. You can also type it: `/alert btc 80000`, `/alert btc 2.5k` or `/alert btc -5%`. Send `/alerts` for all of yours.
+- **In Lance Trade:** tap the 🔔 bell beside a market's price, or **Set price alert** in a position's ⋯ menu. Waiting alerts show as dashed lines on the chart.
+
+Each alert fires once, in Telegram (and in Lance Trade too, if it's open), with the price now and how far it moved. Tap **🔔 Set another** for the next one. You can have up to 20 alerts waiting, each within a tenth and ten times the current price. An alert that hasn't fired after 30 days expires, and the bot tells you.
+
+Your community's owners can switch price alerts off.
+
 ## Alerts can arrive late
 
-The bot checks accounts every 10 seconds when a position is near liquidation, every 30 seconds when you have positions or exits, and every 5 minutes otherwise. Telegram can also be slow. Treat alerts as a convenience, not a safety net: set a stop loss on every position you can't watch.
+The bot checks accounts every 10 seconds when a position is near liquidation, every 30 seconds when you have positions or exits, and every 5 minutes otherwise, and prices for price alerts every 5 seconds. Telegram can also be slow. Treat alerts as a convenience, not a safety net: set a stop loss on every position you can't watch.
 
 <Note>
-  If your community owner pauses the bot, it sends no alerts until it's running again. Your take profits and stop losses stay on Hyperliquid and still work.
+  If Lance pauses your community's bot, it sends no alerts until it's running again. Your take profits and stop losses stay on Hyperliquid and still work.
 </Note>
 
 <RiskWarning />
